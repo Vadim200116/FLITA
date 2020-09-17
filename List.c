@@ -33,7 +33,7 @@ int main(void){
             break;
         case 2:
             ind=pop(&head);
-            if(a)
+            if(!ind)
                 printf("Failed to pop the last number\n");
             else
                 printf("The last number: %d\n",ind);
@@ -69,7 +69,7 @@ void push(int data,tNode** head){
 
 int pop(tNode** head){
      tNode* temp=*head;
-     if (*head==NULL){
+     if (!(*head)){
          return 0;
      }
      *head=temp->next;
